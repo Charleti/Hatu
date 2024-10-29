@@ -13,8 +13,11 @@ provider "google" {
 }
 
 resource "google_compute_instance" "terraform" {
-  name = "terraform"
+  
+  name = "google_compute_instance_terraform"
+  
   machine_type = "e2-micro"
+  
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
